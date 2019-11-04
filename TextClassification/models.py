@@ -63,6 +63,12 @@ def BLSTM_model(embeddings, embedding_dim, num_classes, vocab_size, input_length
 
 def BGRU_model(embeddings, embedding_dim, num_classes, vocab_size, input_length, 
                 unit=GRU, cells=64, **kwargs):
+    """
+        Similaire au modèle BLSTM_model avec
+            - une autre implémentation
+            - BGRU au lieu de BLSTM
+
+    """
     lr = kwargs.get("lr", 0.001)
     # parameters
     bidirectional = kwargs.get("bidirectional", False)
@@ -92,6 +98,13 @@ def BGRU_model(embeddings, embedding_dim, num_classes, vocab_size, input_length,
 
 def BLSTM_attention_model(embeddings, embedding_dim, num_classes, vocab_size, input_length, 
                 unit=LSTM, cells=64, **kwargs):
+
+
+        """
+        Similaire au modèle BLSTM_model avec une couche de mécanisme 
+        d'attention avant la derière couche dense
+
+    """
     lr = kwargs.get("lr", 0.001)
     # parameters
     bidirectional = kwargs.get("bidirectional", False)
