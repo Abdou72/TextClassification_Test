@@ -24,12 +24,12 @@ Le répertoire TextClassification contient les scripts suivants:
      - Remove common, uninformative words that don't add meaning to the sentence,
      - etc.
 
-text_processor = TextPreProcessor (
 
+	text_processor = TextPreProcessor (
 	    normalize=['hashtag','user','email', 'phone', 'url','date','time'], 
 		decode = True,
 		remove = ['stop_list','punctuation','number'],
 		config_preprocess = config
 
 	)
-data['text'] = text_processor.preprocessing_docs(data['text'])
+	data['text'] = text_processor.preprocessing_docs(data['text'])
