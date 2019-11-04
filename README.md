@@ -37,3 +37,6 @@ que les mots non porteurs de sens (e.g. le, de, ce, etc.)
 	data['text'] = text_processor.preprocessing_docs(data['text'])
 
 ## Word embeddings
+Le word embedding est une représentation de mots dans un espace à n dimensions apprise à partir de réseaux de neurones. Chaque mot est représenté par un vecteur de nombres réels capturant la sémantique des mots.  Notre choix fut de construire notre propre représentation
+vectorielle, à partir de tweets récoltés sur internet, pour disposer d'une représentation vectorielle plus
+robuste et adaptée au problème que certains modèles trouvables sur le net.
