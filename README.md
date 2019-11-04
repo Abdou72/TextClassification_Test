@@ -39,4 +39,5 @@ que les mots non porteurs de sens (e.g. le, de, ce, etc.)
 ## Word embeddings
 Le word embedding est une représentation de mots dans un espace à n dimensions apprise à partir de réseaux de neurones. Chaque mot est représenté par un vecteur de nombres réels capturant la sémantique des mots.  Notre choix fut de construire notre propre représentation
 vectorielle, à partir de tweets récoltés sur internet, pour disposer d'une représentation vectorielle plus
-robuste et adaptée au problème que certains modèles trouvables sur le net.
+robuste et adaptée au problème que certains modèles trouvables sur le net. Nos sources proviennent plus d’
+1 million de tweets de différentes catégories relatives aux données de la maif (@maif, @macif, ...)
