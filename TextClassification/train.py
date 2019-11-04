@@ -2,8 +2,8 @@ from preprocessor import TextPreProcessor
 from data_loader import load_pickle_data, load_config_preprocess, data_splits, \
 target_encoder, embeddings_matrix
 from utils import texts2sequences, padding_sequences, concatenate_columns
-from models import BLSTM_model
-from keras.layers import LSTM
+from models import BLSTM_model, BLSTM_attention_model
+from keras.layers import LSTM, GRU
 import sys
 from keras.callbacks import Callback, ModelCheckpoint
 from keras.callbacks import ModelCheckpoint
@@ -60,12 +60,14 @@ embeddings_matrix = embeddings_matrix(w2v_path,embedding_dim,word_index,nb_words
 
 # Building Neuronal Network Model
 print("\n\tBuilding Neuronal Network Model...")
-model = BLSTM_model(embeddings_matrix, num_classes=num_classes, vocab_size=nb_words,
-                                input_length=maxlen, layers=2, unit=LSTM, embedding_dim=200,
-                                cells=cells_rnn, bidirectional=True, lr=0.001, loss_l2=0.000,
-                                dropout_final=0.3, dropout_words=0.3, dropout_rnn=0.3)
+#model = BLSTM_model(embeddings_matrix, num_classes=num_classes, vocab_size=nb_words,
+#                                input_length=maxlen, layers=2, unit=LSTM, embedding_dim=200,
+#                                cells=cells_rnn, bidirectional=True, lr=0.001, loss_l2=0.000,
+#                                dropout_final=0.3, dropout_words=0.3, dropout_rnn=0.3)
 
-
+model = BLSTM_attention_model(embeddings_matrix, num_classes=num_classes, vocab_size=nb_words,
+                                input_length=maxlen, unit=LSTM, embedding_dim=200,
+                                cells=cells_rnn, bidirectional=True)
 
 # Save best model
 filepath="Acc-{epoch:02d}.hdf5"
