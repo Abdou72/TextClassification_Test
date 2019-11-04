@@ -2,9 +2,10 @@
 
 Le but de ce projet est de classifier à un document de la MAIF (post/tweet) à l'une des 9 classes.
 
-Pour lancer le projet il suffit de lancer
+Pour lancer la classification, il suffit de lancer
 
          python train.py
+	 
 Le répertoire TextClassification contient les scripts suivants:
 
   - *Twitter_scraping.py* : pour télécharger automatiquement des tweets à partir des mots clés
@@ -19,9 +20,10 @@ Le répertoire TextClassification contient les scripts suivants:
 
 ## Text Processing
 
- Text processing to filter the noise from the raw text:
-     - All words are lowercase. E-mails, URLs and user handles are normalized,
-     - Remove common, uninformative words that don't add meaning to the sentence,
+ Pour la tâche de la classification, les tweets contiennent plusieurs sources de bruit. L'étape de prétraitement consiste à les   préparer pour un traitement automatique efficace.:
+     - Convertir tous les mots en minuscule, supprimer les informations parasites telles
+que les mots non porteurs de sens (e.g. le, de, ce, etc.)
+     - Normaliser les emails, hashtag, les pseudos, ...
      - etc.
 
 
@@ -33,3 +35,5 @@ Le répertoire TextClassification contient les scripts suivants:
 
 	)
 	data['text'] = text_processor.preprocessing_docs(data['text'])
+
+## Word embeddings
