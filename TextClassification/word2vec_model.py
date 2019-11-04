@@ -7,7 +7,7 @@ import sys
 import os
 
 # Load data and config file
-config = load_config_preprocess('expressions.json')
+config = load_config_preprocess('config.json')
 
 text_processor = TextPreProcessor (
 
@@ -31,4 +31,4 @@ model = Word2Vec(sentences, size=200, window=5, min_count=5)
 #print(model['maif'])
 
 # save model
-model.save('model.bin')
+model.save('model2.bin')
