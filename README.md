@@ -41,5 +41,17 @@ Le word embedding est une représentation de mots dans un espace à n dimensions
 vectorielle, à partir de tweets récoltés sur internet, pour disposer d'une représentation vectorielle plus
 robuste et adaptée au problème que certains modèles trouvables sur le net. Nos sources proviennent plus d’
 1 million de tweets de différentes catégories relatives aux données de la maif (@maif, @macif, ...)
+	
+	from twitterscraper import  query_tweets_from_user
+	tweet = query_tweets_from_user('@maif',limit=50000)
 
-tweet = query_tweets_from_user('@maif',limit=50000)
+Pour lancer le télechargement des données il faut lancer la commande 
+
+		python Twitter_scraping.py
+Les représentations vectorielles ont été obtenues en utilisant l'outil Gensim. Les words embeddings utilisés dans ce
+travail sont de 200 dimensions.
+
+## Apprentissage
+Le script train.py permet de lancer l'apprentissage d'un réseau de neurone de type BLSTM. 
+
+Les paramètres des pretraitements et de l'apprentissage sont définis dans le fichier de config *config.json*
