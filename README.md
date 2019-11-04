@@ -16,10 +16,13 @@ Le répertoire TextClassification contient les scripts suivants:
    
   - config.json: est le fichier de configuration
 
-# Text processing to filter the noise from the raw text:
-#     - All words are lowercase. E-mails, URLs and user handles are normalized,
-#     - Remove common, uninformative words that don't add meaning to the sentence,
-#     - etc.
+
+# Text Processing
+
+ Text processing to filter the noise from the raw text:
+     - All words are lowercase. E-mails, URLs and user handles are normalized,
+     - Remove common, uninformative words that don't add meaning to the sentence,
+     - etc.
 
 text_processor = TextPreProcessor (
 
