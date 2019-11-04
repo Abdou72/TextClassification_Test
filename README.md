@@ -41,3 +41,5 @@ Le word embedding est une représentation de mots dans un espace à n dimensions
 vectorielle, à partir de tweets récoltés sur internet, pour disposer d'une représentation vectorielle plus
 robuste et adaptée au problème que certains modèles trouvables sur le net. Nos sources proviennent plus d’
 1 million de tweets de différentes catégories relatives aux données de la maif (@maif, @macif, ...)
+
+tweet = query_tweets_from_user('@maif',limit=50000)
