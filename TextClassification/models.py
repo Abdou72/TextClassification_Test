@@ -101,10 +101,10 @@ def BLSTM_attention_model(embeddings, embedding_dim, num_classes, vocab_size, in
 
 
         """
-        Similaire au modèle BLSTM_model avec une couche de mécanisme 
-        d'attention avant la derière couche dense
+                Similaire au modèle BLSTM_model avec une couche de mécanisme 
+                d'attention avant la derière couche dense
 
-    """
+        """
     lr = kwargs.get("lr", 0.001)
     # parameters
     bidirectional = kwargs.get("bidirectional", False)
