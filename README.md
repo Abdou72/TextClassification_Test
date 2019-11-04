@@ -57,6 +57,6 @@ Les représentations vectorielles ont été obtenues en utilisant l'outil Gensim
 travail sont de 200 dimensions.
 
 ## Apprentissage
-Le script train.py permet de lancer l'apprentissage d'un réseau de neurone de type BLSTM. 
+Le script train.py permet de lancer l'apprentissage d'un réseau de neurone de type BLSTM/BGRU/BLSTM+Attention mechanisam 
 
 Les paramètres des pretraitements et de l'apprentissage sont définis dans le fichier de config *config.json*
