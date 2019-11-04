@@ -6,8 +6,11 @@ Pour lancer la classification, il suffit de lancer
 
          python train.py
 	 
-Le répertoire TextClassification contient les scripts suivants:
+Le projet contient deux dossiers: TextClassification et data
+
 > *TextClassification*
+
+Le répertoire TextClassification contient les scripts suivants:
 
 	  - *Twitter_scraping.py* : pour télécharger automatiquement des tweets à partir des mots clés
 	  - *preprocessor.py* : pour effectuer les prétraitements sur les tweets
